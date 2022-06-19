@@ -6,7 +6,7 @@ FROM base as paper-builder
 
 RUN apt-get update -y && apt-get install wget -y && \
    mkdir /mcdata && mkdir /temp  && mkdir /plugins && \
-   wget -c https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/323/downloads/paper-1.18.2-323.jar -O /temp/server.jar && \
+   wget -c https://api.papermc.io/v2/projects/paper/versions/1.19/builds/29/downloads/paper-1.19-29.jar -O /temp/server.jar && \
    touch /temp/eula.txt && echo "eula=true" > /temp/eula.txt
 
 #Runtime
